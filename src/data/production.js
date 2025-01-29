@@ -1,3 +1,4 @@
+//THIS CONTAIN DUMMY DATA
 const product = [
     {
         id : "1",

@@ -9,10 +9,27 @@ const typeDefs = gql`
     price: Float!
     instock: Boolean!
     }
-
+    #TO GET QUERY ITEM BY ID
     type Query {
-    products : [Product!]! 
-    product(id: ID!): Product
+    products : [Product!]! #GET ALL THE PRODUCTS
+    product(id: ID!): Product # GET SINGLE PRODUCT
+    }
+
+    type Mutation {
+        createProduct(
+            title: String!
+            category: String!
+            price: Float!
+            instock: Boolean!
+        ): Product
+        deleteProduct(id : ID!) : Boolean
+        updateProduct(
+            id:ID!
+            title  : String
+            category  : String
+            price :  Float
+            instock  : Boolean
+        ): Product
     }
 `;
 
